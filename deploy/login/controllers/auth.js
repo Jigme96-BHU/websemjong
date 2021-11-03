@@ -187,8 +187,6 @@ exports.Offswitch = async (req, res) =>{
 exports.alarm = async (req,res)=>{
   try{
     client.subscribe("TF18");
-    
-    
 
   }catch(error){
     console.error(error);
