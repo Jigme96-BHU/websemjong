@@ -610,131 +610,135 @@ Indiactor styling alarm
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media screen and (max-width: 900px) and (min-width: 600px), (min-width: 1100px) {
+    #sidebar { 
+        font-size: 12px;
+        width: 20%;
+        min-width: 200px;
+    }
+    #sidebar h3{
+        font-size: 14px;
+    }
+    #content{
+        width: 110%;
+    }
+    .headimg .dhi img{
+        height: 30px;
+        margin-left: -30px;
+    }
+    .headimg .gyelsung{
+        margin-left: -110px;
+    }
+    .headimg .gyelsung h2{
+        font-size: 18px;
+        
+    }
+    .headimg .gyelsung span{
+        font-size: 16px;
+        text-align: center;
+    }
+    .headimg .desung{
+        margin-left: -340px;
+    }
+    .headimg .desung img{
+        height: 50px;
+    }
+    .contacts{
+        font-size: 10px;
+    }
+    .card{
+        margin-left: 20px;
+        display: block;
+        
+    }
+    .cardright{
+        margin-left: 0px;
+        
+    }
+    .cards2{
+        display: inline-block;
+    }
+    .card2{
+        margin-left: 15px;
+        
+    }
+    .cards .card{
+        margin-top: 0px;
+        height: 85%;
+    }
+    .card-text h3{
+        font-size: 20px;
+    }
+    .card-text p{
+        font-size: 14px;
+    }
+    .place .text{
+        font-size: 10px;
+    }
+    .phone .text{
+        font-size: 10px;
+        margin: 2px;
+    }
+    .email .text{
+        font-size: 10px;
+    }
+    .cardright .cardright-text h2{
+        font-size: 20px;
+    }
+    .cardright .cardright-text p{
+        font-size: 14px;
+    }
+    .cardreg{
+        margin-left: 5%;
+        margin-top: 3%;
+    }
+    .cardlogin{
+        margin-left: 5%;
+        margin-top: 3%;
+    }
+    .Cardalarm{
+        margin-left: -10%;
+        margin-top: 0px;
+        height: 85%px;
+    }
+    .card3{
+        width: 400px;
+       
+    }
+    .card3 h3{
+        font-size: 18px;
 
+    }
+    .card3 img{
+        height: 350px;
+        width: 400px;
+        margin-left: -0%;
+    }
+    .loadbar{
+        height: 268px;
+        margin-left: -313px;
+        width: 81px;
+        margin-bottom: 2px;
+    }
+    .cir{
+        margin-left: -162px;
+        margin-top: -10px;
+    }
+    .cir1{
+        margin-top: -13px;
+        margin-left: -180px;
+    }
+    .cir2, .cir3, .cir4, .cir5, .cir6, .cir7, .cir8, .cir9{
+        margin-left: -242px;
+        margin-top: -24px;
+    }
+    .cr, .loadbar{
+        margin-top: 200px;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-
-.navbar {
-    width: 80%;
-}
-nav.navbar-custom {
-    width: 90%;
-}
-nav.navbar.navbar-custom{
-    width: 90%;
-}
-/*heading section*/
-
-.headimg{
-    width: 77vw;
-}
-.headimg .dhi{
-    left: 100px;
-    bottom: 40px;
-}
-.headimg .desung{
-    left: 470px;
-}
-.headimg .gyelsung{
-    left: 170px;
-    bottom: 30px;
-}
-.gyelsung span{
-    left: 25px;
-}
-
-/*sidebar section*/
-#sidebar {
-    min-width: 210px;
-    max-width: 210px;
-}
-/*card section home*/
-.card{
-    width: 80%;
-    margin-left: 20px;
-}
-.cardright{
-    width: 80%;
-    margin-left: -2px;
-}
-
-.card2{
-    width: 80%;
-    margin-left: 20px;
-}
-.card2 h3{
-    margin-left: 5px;
-}
-/*events and alram section*/
- /*make changes*/
-.card3{
-    width: 700px;
-    height: 500px;
-    margin-left: 10px;
-  }
-.Cardalarm {
-    height: 250px;
-    width: 200px;
-    margin-top: 45px;
-}
-.cards2{
-    width: 90%;
-    margin-left: 30px;
-}
-.cards2 .card2 input[type="checkbox"]{
-    margin-left: 145px;
-}
-.cards2 .card2{
-    margin-left: 40px;
-}
-.cir{
-    left: 151px;
-}
-.cir1{
-    left: 230px;
-}
-.cir2{
-    left: 559.5px;
-}
-.cir3{
-    left: 559.5px;
-}
-.cir4{
-    left: 559.5px;
-}
-.cir5{
-    left: 559.5px;
-}
-.cir6{
-    left: 559.5px;
-}
-.cir7{
-    left: 559.5px;
-}
-.cir8{
-    left: 559.5px;
-}
-.cir9{
-    left: 559.5px;
-}
-
-
-/*login section*/
-.cardlogin{
-    margin-left: 150px;
-}
-/*registration section*/
-.cardreg{
-    margin-left: 150px;
-}
-.cr{
-    left: 300px;
-    
-}
-
 
 }
 
