@@ -12,15 +12,16 @@ const db = mysql.createConnection({
   database: process.env.DATABASE
 });
 
-var options = {
-  host: process.env.MQTT_HOST,
-  port: process.env.MQTT_PORT,
-  protocol: 'mqtts',
-  username: process.env.MQTT_USERNAME,
-  password: process.env.MQTT_PASSWORD
-}
+// var options = {
+//   host: process.env.MQTT_HOST,
+//   port: process.env.MQTT_PORT,
+//   protocol: 'mqtts',
+//   username: process.env.MQTT_USERNAME,
+//   password: process.env.MQTT_PASSWORD
+// }
 
-var client = mqtt.connect(options);
+// var client = mqtt.connect(options);
+const client = mqtt.connect('mqtt://test.mosquitto.org')
 
 exports.login = async (req, res) => {
   try {
@@ -157,7 +158,7 @@ exports.Onswitch = async (req, res) =>{
     var options={
     retain:true,
     qos:1};
-    client.publish("Cfunction", values,options)
+    // client.publish("Cfunction", values,options)
     res.status(200).redirect("/");
   }
   catch(error){
@@ -176,7 +177,7 @@ exports.Offswitch = async (req, res) =>{
     var options={
     retain:true,
     qos:1};
-    client.publish("Cfunction", valueoff,options)
+    // client.publish("Cfunction", valueoff,options)
     res.status(200).redirect("/");
   }
   catch(error){
@@ -192,4 +193,6 @@ exports.alarm = async (req,res)=>{
     console.error(error);
   }
 }
+
+
 

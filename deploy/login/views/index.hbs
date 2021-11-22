@@ -17,8 +17,9 @@
   <!--Link for button-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="app.css">
-    <link rel="stylesheet" href="card.css">
+    <link rel="stylesheet" href="/app.css">
+    <link rel="stylesheet" href="/card.css">
+    <link rel="stylesheet" href="/index.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
     <title>Home</title>
@@ -36,7 +37,7 @@
 
                 <li class="active"><a href="/">Home</a></li>
                 {{#if user}}
-                <li><a href="http://google.com">Water Scheduling</a></li>
+                <li><a href="http://gorilline-bloodhound-5820.dataplicity.io">Water Scheduling</a></li>
                 <li>
                     <a href="/about">About Us</a>
                 </li>
@@ -58,10 +59,10 @@
                     </div>
                     <div class="phone">
                         <span class="fas fa-phone"></span>
-                        <span class="text">+975 17276676</span>
+                        <span class="text">+975 17301623</span>
                     </div> <div class="email">
-                        <span class="fas fa-envelope"></span>
-                        <span class="text">abc@email.com</span>
+                        {{!-- <span class="fas fa-envelope"></span> --}}
+                        <span class="text">namgayagri@gmail.com</span>
                     </div>
                 </div>
             </div>
@@ -94,6 +95,10 @@
                     </div>
                 </div>
             </nav>
+             {{#if user}}
+             <script type = "text/javascript">  
+                levelfunc()
+            </script> 
             <div class="cards">
                 <div class="card">
                     <div class="card-text">
@@ -114,13 +119,13 @@
                     </div>
                     <div class="card-stats">
                       <div class="stat">
-                        <div class="value">Flow Rate(M<sup>3</sup>/<sub>hr</sub>)</div>
+                        <div class="value">Flow Rate(m<sup>3</sup>/<sub>hr</sub>)</div>
                         <div class="type">
                             <input id="textbox" type="text">
                         </div>
                       </div>
                       <div class="stat border">
-                        <div class="value">Total Flow(M<sup>3</sup>)</div>
+                        <div class="value">Total Flow(m<sup>3</sup>)</div>
                         <div class="type">
                             <input id="textbox1" type="text">
                         </div>
@@ -135,16 +140,16 @@
                     </div>
                     <div class="cardright-stats">
                       <div class="stat">
-                        <div class="value">Level in CM</div>
+                        <div class="value">Level in Meter</div>
                         <div class="type">
-                            <input id="textbox1" type="text">
+                            <input id="tanklevel" type="text">
                         </div>
                       </div>
                     </div>
                 </div>
             </div>
             <div class="cards2">
-                {{#if user}}
+
                 <div class="card2">
                     <center>
                         <input type="checkbox" name="cbox" id="cbox" onchange="onCbChange('cbox')" >
@@ -153,54 +158,32 @@
                    <label id="status"></label>
 
                 </div>
-                <div class="card2">
-                    <center>
-                        <h3>Alarm</h3>
-                        <h4>Sensor Status:</h4>
-                        <div class="radio">
-                            <input type="radio" id="critical" name="critical" value="critical"
-                                   checked>
-                            <label for="critical">Critical</label>
-                            <br/>
-                            <input type="radio" id="critical" name="critical" value="critical"
-                                   checked>
-                            <label for="critical">Ok</label>
-                            <br/>
-                            <input type="radio" id="critical" name="critical" value="critical"
-                                   checked>
-                            <label for="critical">Normal</label>
+                
+                <div class="cardright">
+                    <div class="cardright-text">
+                        <h2>Incoming Flow</h2>
+                        <br/>
+                    </div>
+                    <div class="cardright-stats">
+                      <div class="stat">
+                        <div class="value">Flow in: (m<sup>3</sup>/<sub>hr</sub>)</div>
+                        <div class="type">
+                            <input id="tanklevel" type="text">
                         </div>
-                    </center>
+                      </div>
+                    </div>
                 </div>
                 {{else}}
-                <div class="card2">
-                    <center>
-                        <h3>Alarm</h3>
-                        <h4>Sensor Status:</h4>
-                        <div class="radio">
-                            <input type="radio" id="critical" name="critical" value="critical"
-                                   checked>
-                            <label for="critical">Critical</label>
-                            <br/>
-                            <input type="radio" id="critical" name="critical" value="critical"
-                                   checked>
-                            <label for="critical">Ok</label>
-                            <br/>
-                            <input type="radio" id="critical" name="critical" value="critical"
-                                   checked>
-                            <label for="critical">Normal</label>
-                        </div>
-                    </center>
-                </div>
+                    <script type = "text/javascript">  
+                        frontpage()
+                    </script> 
+                    <div class="semjong">
+                        <img src="/semjong.PNG" class="outimg">
+                        <div class="tank" data-tooltip='Tank level ' tank-height='Tank Height : 3.4 meters &#xa; Tank Capacity: 700K Litres &#xa;' id="tank"></div>
+                        <div class="zone1" total-flow='Total Flow :0.000(m3)' zone1-detail='&#xa; Number of Household : 10 Nos &#xa; Number of sprinkler: 4 Nos &#xa; Main Pipe Length: 50 meters &#xa;' id="zon1"></div>
+                    </div>
 
-                <div class="mapouter">
-                    <div class="gmap_canvas">
-                        <iframe width="350" height="200" id="gmap_canvas" src="https://maps.google.com/maps?q=patshaling%20&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-                        </iframe><a href="https://putlocker-is.org"></a>
-                        <br>
-                        <style>.mapouter{position:absolute;left:900px;text-align:right;height:350px;width:350px;}</style><a href="https://www.embedgooglemap.net">google map code embed</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:451px;width:359px;}</style></div></div>
-                {{/if}}
-            </div>
+                 {{/if}}
         </div>
        
     </div>

@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "jigmetharchen@dhi.bt",
   "license": "ISC",
   "dependencies": {
     "ajax": "0.0.4",

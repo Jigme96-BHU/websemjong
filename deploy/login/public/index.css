@@ -1,0 +1,81 @@
+.tank{
+    position: absolute;
+    background-color: transparent;
+    width: 30px;
+    height: 25px;
+    top: 225px;
+    left: 963px;
+}
+
+.tank::before,
+.tank::after{
+    --scale: 0;
+    position: absolute;
+    content: '';
+    left: 0%;
+    bottom: 150%;
+    height: 50px;
+    width: 50px;
+    transform: scale(var(--scale));
+    transition: 150ms transform;
+    transform-origin: bottom center;
+}
+
+.tank::before{
+    content: attr(tank-height) '' attr(data-tooltip);
+    color: white;
+    padding: .5rem;
+    width: max-content;
+    height: max-content;
+    background: #333;
+    border-radius: .3rem;
+    text-align: center;
+    white-space: pre;
+    display: inline-block;
+}
+
+.tank:hover::before,
+.tank:hover::after{
+    --scale: 1;
+}
+
+.zone1{
+    position: absolute;
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    top: 290px;
+    left: 835px;
+}
+
+.zone1::before,
+.zone1::after{
+    --scale: 0;
+    position: absolute;
+    content: '';
+    left: 0%;
+    bottom: 50%;
+    height: 50px;
+    width: 50px;
+    transform: scale(var(--scale));
+    transition: 150ms transform;
+    transform-origin: bottom center;
+}
+
+.zone1::before{
+    content: attr(total-flow) ' ' attr(zone1-detail);
+    color: white;
+    padding: .5rem;
+    width: max-content;
+    height: max-content;
+    background: #333;
+    border-radius: .3rem;
+    text-align: center;
+    white-space: pre;
+    display: inline-block;
+}
+
+.zone1:hover::before,
+.zone1:hover::after{
+    --scale: 1;
+}

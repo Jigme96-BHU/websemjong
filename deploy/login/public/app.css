@@ -175,7 +175,7 @@ bottom: 30px;
 
 .headimg .dhi img{
     width: 64px;
-    height: 60px;
+    height: 55px;
 }
 .headimg .desung{
     position: absolute;
@@ -184,14 +184,20 @@ bottom: 30px;
 }
 .headimg .gyelsung{
     color: white;
-    position: relative;
-    left: 300px;
-    bottom: 20px;
+    position: absolute;
+    left: 350px;
+    bottom: 50px;
 }
 .gyelsung h2{
     position: absolutes;
 }
 .gyelsung span{
+    position: absolute;
+}
+
+.outimg{
+    width: 1200px;
+    height: 600px;
     position: absolute;
 }
 
@@ -344,8 +350,15 @@ bottom: 30px;
     border-radius: 10px;
     text-align: center;
 }
+
 .cardright-stats .stat .type #textbox1{
     width: 100px;
+    font-size: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+.cardright-stats .stat .type #tanklevel{
+    width: 150px;
     font-size: 30px;
     border-radius: 10px;
     text-align: center;
@@ -471,6 +484,13 @@ Indiactor styling alarm
     top: 110px;
     left: 609px;
 }
+.c2{
+    position:absolute;
+    top: 100px;
+    left: 655px;
+    font-weight: bold;
+    font-size: 20px;
+}
 .cir3{
     position: absolute;
     background-color: green;
@@ -479,6 +499,13 @@ Indiactor styling alarm
     border-radius: 10px;
     top: 153px;
     left: 609px;
+}
+.c3{
+    position:absolute;
+    top: 143px;
+    left: 655px;
+    font-weight: bold;
+    font-size: 20px;
 }
 .cir4{
     position: absolute;
@@ -489,6 +516,13 @@ Indiactor styling alarm
     top: 201px;
     left: 609px;
 }
+.c4{
+    position:absolute;
+    top: 190px;
+    left: 655px;
+    font-weight: bold;
+    font-size: 20px;
+}
 .cir5{
     position: absolute;
     background-color: green;
@@ -497,6 +531,13 @@ Indiactor styling alarm
     border-radius: 10px;
     top: 247px;
     left: 609px;
+}
+.c5{
+    position:absolute;
+    top: 237px;
+    left: 655px;
+    font-weight: bold;
+    font-size: 20px;
 }
 .cir6{
     position: absolute;
@@ -507,6 +548,13 @@ Indiactor styling alarm
     top: 280px;
     left: 609px;
 }
+.c6{
+    position:absolute;
+    top: 273px;
+    left: 655px;
+    font-weight: bold;
+    font-size: 20px;
+}
 .cir7{
     position: absolute;
     background-color: green;
@@ -515,6 +563,13 @@ Indiactor styling alarm
     border-radius: 10px;
     top: 322px;
     left: 609px;
+}
+.c7{
+    position:absolute;
+    top: 313px;
+    left: 655px;
+    font-weight: bold;
+    font-size: 20px;
 }
 .cir8{
     position: absolute;
@@ -525,6 +580,13 @@ Indiactor styling alarm
     top: 370px;
     left: 609px;
 }
+.c8{
+    position:absolute;
+    top: 360px;
+    left: 655px;
+    font-weight: bold;
+    font-size: 20px;
+}
 .cir9{
     position: absolute;
     background-color: green;
@@ -534,6 +596,14 @@ Indiactor styling alarm
     top: 417px;
     left: 609px;
 }
+.c9{
+    position:absolute;
+    top: 410px;
+    left: 655px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
 .Cardalarm img{
 
     height: 350px;
@@ -591,7 +661,7 @@ Indiactor styling alarm
     MEDIAQUERIES
 ----------------------------------------------------- */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     #sidebar {
         margin-left: -250px;
     }
@@ -603,4 +673,455 @@ Indiactor styling alarm
         display: none;
     }
 
+} */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 200px) {
+
+     #sidebar {
+        margin-left: -250px;
+    }
+
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+   
+    /* NAVBAR */
+    
+    p {
+        font-size: 0.9em;
+        line-height: 5%;
+    }
+    .line {
+        width: 50%;
+        height: 1px;
+        margin: 40px 0;
+    }
+    nav.navbar-custom {
+        height: 100px;
+        border-radius: 10px;
+        width: 100%;
+    }
+    .navbar {
+        height: auto;
+        width: 80%;
+    }
+
+    /* SLIDEBAR */
+
+    #sidebar {
+        min-width: 150px;
+        max-width: 150px;
+    }
+    #sidebar h3 span{
+        font-size: 30px;
+    }
+
+    #sidebar ul li a {
+        font-size: 0.9em;
+    }
+
+    ul ul a {
+        font-size: 0.1em !important;
+    }
+
+    ul.CTAs a {
+        text-align: none;
+        font-size: 0.1em !important;
+    }
+    .text {
+        font-size: 13px;
+    }
+    /* CONTENT */
+    #content {
+        width: 76%;
+        min-height: 40vh;
+    }
+
+    /* HEADER */
+    .headimg{
+        width: 77vh;
+    }
+    
+    .headimg .dhi{
+        left: 70px;
+        bottom: 30px;
+    }
+    .headimg .dhi img{
+        width: 40px;
+        height: 30px;
+    }
+    .headimg .desung{
+        left: 310px;
+        bottom: 30px;
+    }
+    .headimg .desung img{
+        width: 100px;
+        height: 50px;
+        }
+
+    .headimg .gyelsung{
+        left: 130px;
+        bottom: 30px;
+        font-size: 13px;
+    }
+    .headimg h2{
+        font-size: 17px;
+    }
+
+    /* 3D ON BUTTON */
+    .cards2 .card2 input[type="checkbox"]{
+        height: 100px;
+        width: 100px;
+        margin-left: 170px;
+    }
+    input[type="checkbox"]::after{
+        font-size: 60px;
+    }
+    .card2 h3{
+        margin-top: 10px;
+        margin-left: 50px;
+    }
+    .card2 #status{
+        margin-top: 50px;
+        font-size: 30px;
+        margin-left: 50px;
+    }
+
+    /*--Indiactor styling alarm--*/
+
+    .cir{
+        top: 190px;
+        left: 65px;
+    }
+    .cir1{
+        top: 189px;
+        left: 120px;
+    }
+    .cir2{
+        top: 97px;
+        left: 350px;
+    }
+    .cir3{
+        top: 125px;
+        left: 350px;
+    }
+    .cir4{
+        top: 155px;
+        left: 350px;
+    }
+    .cir5{
+        top: 185px;
+        left: 350px;
+    }
+    .cir6{
+        top: 205px;
+        left: 350px;
+    }
+    .cir7{
+        top: 233px;
+        left: 350px;
+    }
+    .cir8{
+        top: 263px;
+        left: 350px;
+    }
+    .cir9{
+        top: 293px;
+        left: 350px;
+    }
+
+    .Cardalarm img{
+        height: 220px;
+        width: 350px;
+        margin-top: 45px;
+    }
+
+    .loadbar{
+        margin-left: -300px;
+        margin-bottom: 19px;
+        width: 62px;
+        height: 168px;
+    }
+
+    .bar{
+        font-size: 20px;
+        width: 60px;
+    }
+
+    .card3{
+        width: 410px;
+        height: 400px;
+        margin-left: 5px;
+    }
+
+
+    /* LOGIN SECTION */
+    .cardreg{
+        margin-left: 18px;
+    }
+    .cardlogin{
+        width: 300px;
+        height: 300px;
+        margin-left: 70px;
+    }
+        
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    /* #sidebar { 
+        font-size: 12px;
+        width: 20%;
+        min-width: 200px;
+    }
+    #sidebar h3{
+        font-size: 14px;
+    }
+    #content{
+        width: 110%;
+    }
+    .headimg .dhi img{
+        height: 30px;
+        margin-left: -30px;
+    }
+    .headimg .gyelsung{
+        margin-left: -110px;
+    }
+    .headimg .gyelsung h2{
+        font-size: 18px;
+        
+    }
+    .headimg .gyelsung span{
+        font-size: 16px;
+        text-align: center;
+    }
+    .headimg .desung{
+        margin-left: -340px;
+    }
+    .headimg .desung img{
+        height: 50px;
+    }
+    .contacts{
+        font-size: 10px;
+    }
+    .card{
+        margin-left: 20px;
+        display: block;
+        
+    }
+    .cardright{
+        margin-left: 0px;
+        
+    }
+    .cards2{
+        display: inline-block;
+    }
+    .card2{
+        margin-left: 15px;
+        
+    }
+    .cards .card{
+        margin-top: 0px;
+        height: 85%;
+    }
+    .card-text h3{
+        font-size: 20px;
+    }
+    .card-text p{
+        font-size: 14px;
+    }
+    .place .text{
+        font-size: 10px;
+    }
+    .phone .text{
+        font-size: 10px;
+        margin: 2px;
+    }
+    .email .text{
+        font-size: 10px;
+    }
+    .cardright .cardright-text h2{
+        font-size: 20px;
+    }
+    .cardright .cardright-text p{
+        font-size: 14px;
+    }
+    .cardreg{
+        margin-left: 5%;
+        margin-top: 3%;
+    }
+    .cardlogin{
+        margin-left: 5%;
+        margin-top: 3%;
+    }
+    .Cardalarm{
+        margin-left: -10%;
+        margin-top: 0px;
+        height: 85%px;
+    }
+    .card3{
+        width: 400px;
+       
+    }
+    .card3 h3{
+        font-size: 18px;
+
+    }
+    .card3 img{
+        height: 350px;
+        width: 400px;
+        margin-left: -0%;
+    }
+    .loadbar{
+        height: 268px;
+        margin-left: -313px;
+        width: 81px;
+        margin-bottom: 2px;
+    }
+    .cir{
+        margin-left: -162px;
+        margin-top: -10px;
+    }
+    .cir1{
+        margin-top: -13px;
+        margin-left: -180px;
+    }
+    .cir2, .cir3, .cir4, .cir5, .cir6, .cir7, .cir8, .cir9{
+        margin-left: -242px;
+        margin-top: -24px;
+    }
+    .cr, .loadbar{
+        margin-top: 200px;
+    } */
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    /* .navbar {
+        width: 80%;
+    }
+    nav.navbar-custom {
+        width: 90%;
+    }
+    nav.navbar.navbar-custom{
+        width: 90%;
+    }
+    /*heading section
+    
+    .headimg{
+        width: 77vw;
+    }
+    .headimg .dhi{
+        left: 100px;
+        bottom: 40px;
+    }
+    .headimg .desung{
+        left: 470px;
+    }
+    .headimg .gyelsung{
+        left: 170px;
+        bottom: 30px;
+    }
+    .gyelsung span{
+        left: 25px;
+    }
+    
+    /*sidebar section
+    #sidebar {
+        min-width: 210px;
+        max-width: 210px;
+    }
+    /*card section home
+    .card{
+        width: 80%;
+        margin-left: 20px;
+    }
+    .cardright{
+        width: 80%;
+        margin-left: -2px;
+    }
+    
+    .card2{
+        width: 80%;
+        margin-left: 20px;
+    }
+    .card2 h3{
+        margin-left: 5px;
+    }
+    /*events and alram section*/
+     /*make changes
+    .card3{
+        width: 700px;
+        height: 500px;
+        margin-left: 10px;
+      }
+    .Cardalarm {
+        height: 250px;
+        width: 200px;
+        margin-top: 45px;
+    }
+    .cards2{
+        width: 90%;
+        margin-left: 30px;
+    }
+    .cards2 .card2 input[type="checkbox"]{
+        margin-left: 145px;
+    }
+    .cards2 .card2{
+        margin-left: 40px;
+    }
+    .cir{
+        left: 151px;
+    }
+    .cir1{
+        left: 230px;
+    }
+    .cir2{
+        left: 559.5px;
+    }
+    .cir3{
+        left: 559.5px;
+    }
+    .cir4{
+        left: 559.5px;
+    }
+    .cir5{
+        left: 559.5px;
+    }
+    .cir6{
+        left: 559.5px;
+    }
+    .cir7{
+        left: 559.5px;
+    }
+    .cir8{
+        left: 559.5px;
+    }
+    .cir9{
+        left: 559.5px;
+    }
+    
+    
+    /*login section
+    .cardlogin{
+        margin-left: 150px;
+    }
+    /*registration section
+    .cardreg{
+        margin-left: 150px;
+    }
+    .cr{
+        left: 300px;
+        
+    }  */
 }
