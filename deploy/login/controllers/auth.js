@@ -21,7 +21,7 @@ const db = mysql.createConnection({
 // }
 
 // var client = mqtt.connect(options);
-const client = mqtt.connect('mqtt://test.mosquitto.org')
+const client = mqtt.connect('mqtt://broker.hivemq.com')
 
 exports.login = async (req, res) => {
   try {
@@ -158,7 +158,7 @@ exports.Onswitch = async (req, res) =>{
     var options={
     retain:true,
     qos:1};
-    // client.publish("Cfunction", values,options)
+    client.publish("Cfunction", values,options)
     res.status(200).redirect("/");
   }
   catch(error){
@@ -177,7 +177,7 @@ exports.Offswitch = async (req, res) =>{
     var options={
     retain:true,
     qos:1};
-    // client.publish("Cfunction", valueoff,options)
+    client.publish("Cfunction", valueoff,options)
     res.status(200).redirect("/");
   }
   catch(error){

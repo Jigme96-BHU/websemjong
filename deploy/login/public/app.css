@@ -164,7 +164,7 @@ a.article:hover {
     Header STYLE
 ----------------------------------------------------- */
 .headimg{
-    width: 70vw;
+    width: 65vw;
 }
 
 .headimg .dhi{
@@ -179,30 +179,15 @@ bottom: 30px;
 }
 .headimg .desung{
     position: absolute;
-    left: 750px;
-    bottom: 20px;
+    left: 500px; 
+    top:5px;
 }
-.headimg .gyelsung{
-    color: white;
+.gyelsung img{
     position: absolute;
-    left: 350px;
-    bottom: 50px;
-}
-.gyelsung h2{
-    position: absolutes;
-}
-.gyelsung span{
-    position: absolute;
-}
-
-.outimg{
-    width: 1200px;
-    height: 600px;
-    position: absolute;
-}
-
-#zone{
-    font-size: 30px;
+    width: 90px;
+    height: 90px;
+    left: 1050px;
+    bottom: 15px;
 }
 /* ---------------------------------------------------
     Top Card STYLE
@@ -221,7 +206,7 @@ bottom: 30px;
   }
 
   .cardright{
-    width: 350px;
+    width: 360px;
     grid-template-rows: 130px 100px;
     grid-template-areas: "text" "stats"; 
     border-radius: 18px;
@@ -232,7 +217,7 @@ bottom: 30px;
     padding: 10px;
   }
   .card2{
-    display: grid;
+    /* display: grid;
     width: 355px;
     grid-template-columns: 300px;
     grid-template-rows: 130px 100px;
@@ -243,7 +228,19 @@ bottom: 30px;
     background: white;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
     font-family: roboto;
+    text-align: center; */
+
+    width: 355px;
+    height: 255px;
+    grid-template-rows: 130px 100px;
+    grid-template-areas: "text" "stats"; 
+    border-radius: 18px;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    font-family: roboto;
     text-align: center;
+    padding: 10px;
+    margin-top: 30px;
   }
   .card3{
     width: 800px;
@@ -357,7 +354,37 @@ bottom: 30px;
     border-radius: 10px;
     text-align: center;
 }
-.cardright-stats .stat .type #tanklevel{
+#tanklevel{
+    width: 150px;
+    font-size: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+#tankvolume{
+    width: 120px;
+    font-size: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+#drinkinglevel{
+    width: 150px;
+    font-size: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+#drinkingvolume{
+    width: 120px;
+    font-size: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+#outflows{
+    width: 120px;
+    font-size: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+.cardright-stats .stat .type #flowincoming{
     width: 150px;
     font-size: 30px;
     border-radius: 10px;
@@ -369,11 +396,11 @@ bottom: 30px;
     font-weight: 300;
   }
   .card:hover {
-    transform: scale(1.15);
+    transform: scale(1.05);
     box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
   }
   .cardright:hover {
-    transform: scale(1.15);
+    transform: scale(1.05);
     box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
   }
   .card {
@@ -387,7 +414,7 @@ bottom: 30px;
     margin: 30px 30px 30px 100px;
   }
   .card2:hover {
-    transform: scale(1.15);
+    transform: scale(1.05);
     box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
   }
   .card2 {
@@ -400,7 +427,7 @@ bottom: 30px;
 
 3D ON off Button
 -------------------------------------------*/
-.cards2 .card2 input[type="checkbox"]{
+#cbox{
     height: 100px;
     width: 100px;
     -webkit-appearance: none;
@@ -419,14 +446,14 @@ bottom: 30px;
     cursor: pointer;
 
 }
-input[type="checkbox"]::after{
+#cbox::after{
     font-family: FontAwesome;
     content: '\f011';
     color: red;
     font-size: 60px;
     
 }
-input[type="checkbox"]:checked{
+#cbox:checked{
     box-shadow: 
     -10px -10px 15px rgba(138, 90, 90, 0.5),
     10px 10px 15px rgba(70,70,70,0.12),
@@ -434,7 +461,7 @@ input[type="checkbox"]:checked{
     inset 10px 10px 15px rgba(70,70,70,0.12);
 }
 
-input[type="checkbox"]:checked::after{
+#cbox:checked::after{
     color: #15e38a;
 }
 
@@ -445,9 +472,9 @@ input[type="checkbox"]:checked::after{
 
 .card2 #status{
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 130px;
     font-size: 30px;
-    margin-left: 50px;
+    margin-left: 15px;
 }
 .card2 .radio{
     display: block;

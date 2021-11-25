@@ -1,10 +1,10 @@
 .tank{
     position: absolute;
-    background-color: transparent;
-    width: 30px;
-    height: 25px;
-    top: 225px;
-    left: 963px;
+    background-color:transparent;
+    width: 100px;
+    height: 100px;
+    top: 280px;
+    left: 957px;
 }
 
 .tank::before,
@@ -13,7 +13,7 @@
     position: absolute;
     content: '';
     left: 0%;
-    bottom: 150%;
+    bottom: 100%;
     height: 50px;
     width: 50px;
     transform: scale(var(--scale));
@@ -45,7 +45,7 @@
     width: 100px;
     height: 100px;
     top: 290px;
-    left: 835px;
+    left: 800px;
 }
 
 .zone1::before,
@@ -77,5 +77,288 @@
 
 .zone1:hover::before,
 .zone1:hover::after{
+    --scale: 1;
+}
+
+.zone2{
+    position: absolute;
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    top: 240px;
+    left: 650px;
+}
+
+.zone2::before,
+.zone2::after{
+    --scale: 0;
+    position: absolute;
+    content: '';
+    left: 0%;
+    bottom: 50%;
+    height: 50px;
+    width: 50px;
+    transform: scale(var(--scale));
+    transition: 150ms transform;
+    transform-origin: bottom center;
+}
+
+.zone2::before{
+    content: attr(total-flow) ' ' attr(zone1-detail);
+    color: white;
+    padding: .5rem;
+    width: max-content;
+    height: max-content;
+    background: #333;
+    border-radius: .3rem;
+    text-align: center;
+    white-space: pre;
+    display: inline-block;
+}
+
+.zone2:hover::before,
+.zone2:hover::after{
+    --scale: 1;
+}
+
+.zone3{
+    position: absolute;
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    top: 240px;
+    left: 500px;
+}
+
+.zone3::before,
+.zone3::after{
+    --scale: 0;
+    position: absolute;
+    content: '';
+    left: 0%;
+    bottom: 50%;
+    height: 50px;
+    width: 50px;
+    transform: scale(var(--scale));
+    transition: 150ms transform;
+    transform-origin: bottom center;
+}
+
+.zone3::before{
+    content: attr(total-flow) ' ' attr(zone1-detail);
+    color: white;
+    padding: .5rem;
+    width: max-content;
+    height: max-content;
+    background: #333;
+    border-radius: .3rem;
+    text-align: center;
+    white-space: pre;
+    display: inline-block;
+}
+
+.zone3:hover::before,
+.zone3:hover::after{
+    --scale: 1;
+}
+.zone4{
+    position: absolute;
+    background-color:transparent;
+    width: 130px;
+    height: 100px;
+    top: 350px;
+    left: 625px;
+}
+
+.zone4::before,
+.zone4::after{
+    --scale: 0;
+    position: absolute;
+    content: '';
+    left: 0%;
+    bottom: 50%;
+    height: 50px;
+    width: 50px;
+    transform: scale(var(--scale));
+    transition: 150ms transform;
+    transform-origin: bottom center;
+}
+
+.zone4::before{
+    content: attr(total-flow) ' ' attr(zone1-detail);
+    color: white;
+    padding: .5rem;
+    width: max-content;
+    height: max-content;
+    background: #333;
+    border-radius: .3rem;
+    text-align: center;
+    white-space: pre;
+    display: inline-block;
+}
+
+.zone4:hover::before,
+.zone4:hover::after{
+    --scale: 1;
+}
+
+.zone5{
+    position: absolute;
+    background-color:transparent;
+    width: 130px;
+    height: 100px;
+    top: 450px;
+    left: 745px;
+}
+
+.zone5::before,
+.zone5::after{
+    --scale: 0;
+    position: absolute;
+    content: '';
+    left: 0%;
+    bottom: 50%;
+    height: 50px;
+    width: 50px;
+    transform: scale(var(--scale));
+    transition: 150ms transform;
+    transform-origin: bottom center;
+}
+
+.zone5::before{
+    content: attr(total-flow) ' ' attr(zone1-detail);
+    color: white;
+    padding: .5rem;
+    width: max-content;
+    height: max-content;
+    background: #333;
+    border-radius: .3rem;
+    text-align: center;
+    white-space: pre;
+    display: inline-block;
+}
+
+.zone5:hover::before,
+.zone5:hover::after{
+    --scale: 1;
+}
+.zone6{
+    position: absolute;
+    background-color:transparent;
+    width: 130px;
+    height: 150px;
+    top: 350px;
+    left: 465px;
+}
+
+.zone6::before,
+.zone6::after{
+    --scale: 0;
+    position: absolute;
+    content: '';
+    left: 0%;
+    bottom: 50%;
+    height: 50px;
+    width: 50px;
+    transform: scale(var(--scale));
+    transition: 150ms transform;
+    transform-origin: bottom center;
+}
+
+.zone6::before{
+    content: attr(total-flow) ' ' attr(zone1-detail);
+    color: white;
+    padding: .5rem;
+    width: max-content;
+    height: max-content;
+    background: #333;
+    border-radius: .3rem;
+    text-align: center;
+    white-space: pre;
+    display: inline-block;
+}
+
+.zone6:hover::before,
+.zone6:hover::after{
+    --scale: 1;
+}
+.zone7{
+    position: absolute;
+    background-color:transparent;
+    width: 130px;
+    height: 140px;
+    top: 490px;
+    left: 585px;
+}
+
+.zone7::before,
+.zone7::after{
+    --scale: 0;
+    position: absolute;
+    content: '';
+    left: 0%;
+    bottom: 50%;
+    height: 50px;
+    width: 50px;
+    transform: scale(var(--scale));
+    transition: 150ms transform;
+    transform-origin: bottom center;
+}
+
+.zone7::before{
+    content: attr(total-flow) ' ' attr(zone1-detail);
+    color: white;
+    padding: .5rem;
+    width: max-content;
+    height: max-content;
+    background: #333;
+    border-radius: .3rem;
+    text-align: center;
+    white-space: pre;
+    display: inline-block;
+}
+
+.zone7:hover::before,
+.zone7:hover::after{
+    --scale: 1;
+}
+.zone8{
+    position: absolute;
+    background-color:transparent;
+    width: 100px;
+    height: 100px;
+    top: 540px;
+    left: 745px;
+}
+
+.zone8::before,
+.zone8::after{
+    --scale: 0;
+    position: absolute;
+    content: '';
+    left: 0%;
+    bottom: 50%;
+    height: 50px;
+    width: 50px;
+    transform: scale(var(--scale));
+    transition: 150ms transform;
+    transform-origin: bottom center;
+}
+
+.zone8::before{
+    content: attr(total-flow) ' ' attr(zone1-detail);
+    color: white;
+    padding: .5rem;
+    width: max-content;
+    height: max-content;
+    background: #333;
+    border-radius: .3rem;
+    text-align: center;
+    white-space: pre;
+    display: inline-block;
+}
+
+.zone8:hover::before,
+.zone8:hover::after{
     --scale: 1;
 }

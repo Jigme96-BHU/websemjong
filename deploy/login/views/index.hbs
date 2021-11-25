@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/app.css">
     <link rel="stylesheet" href="/card.css">
     <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/landing.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
     <title>Home</title>
@@ -29,12 +30,12 @@
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3><span>S</span>emjong Water Project</h3>
+                {{!-- <h3><span>S</span>emjong Water Project</h3> --}}
+            <h5>DE-SUUNG NATIONAL SERVICE WATER PROJECT</h5>
             </div>
+            <p>Semjong Integrated Water Supply Pilot Project</p>
 
             <ul class="list-unstyled components">
-                <p>Welcome</p>
-
                 <li class="active"><a href="/">Home</a></li>
                 {{#if user}}
                 <li><a href="http://gorilline-bloodhound-5820.dataplicity.io">Water Scheduling</a></li>
@@ -66,6 +67,17 @@
                     </div>
                 </div>
             </div>
+
+            <div class="contacts">
+                
+                <div class="contact">
+                    <label>Presented by:</label>
+                    <div class="place">
+                        <span class="fas fa-map-marker-alt"></span>
+                        <span class="text">DRIVE, Innotech dept. DHI</span>
+                    </div>
+                </div>
+            </div>
             
         </nav>
 
@@ -89,8 +101,7 @@
                             <img src="/DHI.png">
                         </div>
                         <div class="gyelsung">
-                            <h2>Gyalsung Infra</h2>
-                            <span>The National Service</span>
+                           <img src="/rogb.png">
                         </div>
                     </div>
                 </div>
@@ -100,9 +111,91 @@
                 levelfunc()
             </script> 
             <div class="cards">
+                 <div class="cardright">
+                    <div class="cardright-text">
+                        <h2>Incoming Flow</h2>
+                        <p>Flow rate<br/> of transmisson main pipe </p>
+                    </div>
+                    <div class="cardright-stats">
+                      <div class="stat">
+                        <div class="value">Flow in: (m<sup>3</sup>/<sub>hr</sub>)</div>
+                        <div class="type">
+                            <input id="flowincoming" type="text">
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="cardright">
+                     <div class="card-text">
+                      <h2>Reservoir Tank</h2>
+                      <p>Level and volume<br/> of reservoir tank </p>
+                    </div>
+                    <div class="card-stats">
+                      <div class="stat">
+                        <div class="value">Level in (meter)</div>
+                        <div class="type">
+                            <input id="tanklevel" type="text">
+                        </div>
+                      </div>
+                      <div class="stat border">
+                        <div class="value">Tank Volume(m<sup>3</sup>)</div>
+                        <div class="type">
+                            <input id="tankvolume" type="text">
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="cardright">
+                     <div class="card-text">
+                      <h2>Drinking Tank</h2>
+                      <p>Level and volume <br/>of drinking tank</p>
+                    </div>
+                    <div class="card-stats">
+                      <div class="stat">
+                        <div class="value">Level in (meter)</div>
+                        <div class="type">
+                            <input id="drinkinglevel" type="text">
+                        </div>
+                      </div>
+                      <div class="stat border">
+                        <div class="value">Tank Volume(m<sup>3</sup>)</div>
+                        <div class="type">
+                            <input id="drinkingvolume" type="text">
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cards2">
+
+                <div class="card2">
+                    <center>
+                        <input type="checkbox" name="cbox" id="cbox" onchange="onCbChange('cbox')" >
+                        <h3>Incoming valve control</h3>
+                    </center>
+                   <label id="status"></label>
+                </div>
+                
+                 
+                <div class="cardright">
+                    <div class="cardright-text">
+                        <h2>Drinking Outflow</h2>
+                        <p>Flow rate<br/> of drinking pipe</p>
+                    </div>
+                    <div class="cardright-stats">
+                      <div class="stat">
+                        <div class="value">Flow in: (m<sup>3</sup>/<sub>hr</sub>)</div>
+                        <div class="type">
+                            <input id="outflows" type="text">
+                        </div>
+                      </div>
+                    </div>
+                </div>  
                 <div class="card">
                     <div class="card-text">
-                      <h2>Water Flow</h2>
+                      <h2>Irrigation outflow</h2>
                       <select id="zoneselect" onchange="getselectedvalue();">
                           <option value="0">Choose One</option>
                           <option value="1">Zone 1</option>
@@ -114,8 +207,7 @@
                           <option value="7">Zone 7</option>
                           <option value="8">Zone 8</option>
                       </select>
-                      <br/>
-                      <label id="zones"></label>
+                      <p>Flows of irrigation pipe</p>
                     </div>
                     <div class="card-stats">
                       <div class="stat">
@@ -131,60 +223,92 @@
                         </div>
                       </div>
                     </div>
-                </div> 
+                </div>   
+        </div>
 
-                <div class="cardright">
-                    <div class="cardright-text">
-                        <h2>Water Level</h2>
-                        <p>Total level<br/> of source tank</p>
-                    </div>
-                    <div class="cardright-stats">
-                      <div class="stat">
-                        <div class="value">Level in Meter</div>
-                        <div class="type">
-                            <input id="tanklevel" type="text">
-                        </div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-            <div class="cards2">
-
-                <div class="card2">
-                    <center>
-                        <input type="checkbox" name="cbox" id="cbox" onchange="onCbChange('cbox')" >
-                        <h3>Valve Control</h3>
-                    </center>
-                   <label id="status"></label>
-
-                </div>
-                
-                <div class="cardright">
-                    <div class="cardright-text">
-                        <h2>Incoming Flow</h2>
-                        <br/>
-                    </div>
-                    <div class="cardright-stats">
-                      <div class="stat">
-                        <div class="value">Flow in: (m<sup>3</sup>/<sub>hr</sub>)</div>
-                        <div class="type">
-                            <input id="tanklevel" type="text">
-                        </div>
-                      </div>
-                    </div>
-                </div>
-                {{else}}
+        {{else}}
                     <script type = "text/javascript">  
                         frontpage()
                     </script> 
                     <div class="semjong">
-                        <img src="/semjong.PNG" class="outimg">
+                        <img src="/images/overall_map.png" id="outimg" class="outimg">
+                        
                         <div class="tank" data-tooltip='Tank level ' tank-height='Tank Height : 3.4 meters &#xa; Tank Capacity: 700K Litres &#xa;' id="tank"></div>
-                        <div class="zone1" total-flow='Total Flow :0.000(m3)' zone1-detail='&#xa; Number of Household : 10 Nos &#xa; Number of sprinkler: 4 Nos &#xa; Main Pipe Length: 50 meters &#xa;' id="zon1"></div>
+                        <div class="zone1" total-flow='Total Flow :0.000(m3)' zone1-detail='&#xa; Number of Household : 14 Nos &#xa; Area in Acre: 8.195 &#xa; Area in m2: 29013 &#xa;' id="zon2"></div>
+                        <div class="zone3" total-flow='Total Flow :0.000(m3)' zone1-detail='&#xa; Number of Household : 5 Nos &#xa; Area in Acre:  13.529 &#xa; Area in m2: 33583 &#xa;' id="zon1"></div>
+                        <div class="zone2" total-flow='Total Flow :0.000(m3)' zone1-detail='&#xa; Number of Household : 9 Nos &#xa; Area in Acre: 2.385 &#xa; Area in m2: 9651 &#xa;' id="zon3"></div>
+                        <div class="zone4" total-flow='Total Flow :0.000(m3)' zone1-detail='&#xa; Number of Household : 3 Nos &#xa; Area in Acre: 4.199 &#xa; Area in m2: 16990 &#xa;' id="zon4"></div>
+                        <div class="zone5" total-flow='Total Flow :0.000(m3)' zone1-detail='&#xa; Number of Household : 10 Nos &#xa; Area in Acre: 10.604 &#xa; Area in m2: 42903 &#xa;' id="zon5"></div>
+                        <div class="zone6" total-flow='Total Flow :0.000(m3)' zone1-detail='&#xa; Number of Household : 9 Nos &#xa; Area in Acre: 6.434 &#xa; Area in m2: 8673 &#xa;' id="zon6"></div>
+                        <div class="zone7" total-flow='Total Flow :0.000(m3)' zone1-detail='&#xa; Number of Household : 3 Nos &#xa; Area in Acre: 16.934 &#xa; Area in m2:48989 &#xa;' id="zon7"></div>
+                        <div class="zone8" total-flow='Total Flow :0.000(m3)' zone1-detail='&#xa; Number of Household : nill &#xa; Area in Acre: 9.609 &#xa; Area in m2:38878 &#xa;' id="zon8"></div>
+                        <div id="navcheck">
+                            <script>
+                                function checkbox1(val1){
+                                    
+                                    if(val1.checked){
+                                        document.getElementById("outimg").src = "/images/all_shaded.png";
+                                    }else{   
+                                        if(document.getElementById("ncb2").checked){
+                                            document.getElementById("outimg").src = "/images/reservoir.png";
+                                            
+                                        }else{
+                                            document.getElementById("outimg").src = "/images/overall_map.png";
+                                        } 
+                                    }
+
+                                }
+
+                                function checkbox2(val2){
+
+                                    if(val2.checked){
+                                        document.getElementById("outimg").src = "/images/reservoir.png";
+                                        
+                                    }else{
+                                        if(document.getElementById("ncb1").checked){
+                                            document.getElementById("outimg").src = "/images/all_shaded.png";
+                                        }else{
+                                            document.getElementById("outimg").src = "/images/overall_map.png";
+                                        } 
+                                    }
+                                }
+
+
+                            </script>
+                            <label for="ncb2">Reservoir</label>
+                            <input type="checkbox" name="ncb2" id="ncb2" onclick="checkbox2(this)"><br>
+                            <label for="ncb1">Zone</label>
+                            <input type="checkbox" name="ncb1" id="ncb1" onclick="checkbox1(this)"><br>
+                        </div>
+                        <div id="navzones">
+                            <script>
+
+                                function radiozone(val){
+                                    document.getElementById("outimg").src = `/images/${val.value}`;        
+                                }
+
+                            </script>
+                            <label>Zone 1</label>
+                            <input type="radio" value="z1.png" id="zone1" name="zonerd" onchange="radiozone(this)" ><br>
+                            <label>Zone 2</label>
+                            <input type="radio" value="z2.png" id="zone2" name="zonerd" onchange="radiozone(this)" ><br>
+                            <label>Zone 3</label>
+                            <input type="radio" value="z3.png" id="zone3" name="zonerd" onchange="radiozone(this)"><br>
+                            <label>Zone 4</label>
+                            <input type="radio" value="z4.png" id="zone4" name="zonerd" onchange="radiozone(this)"><br>
+                            <label>Zone 5</label>
+                            <input type="radio" value="z5.png" id="zone5" name="zonerd" onchange="radiozone(this)"><br>
+                            <label>Zone 6</label>
+                            <input type="radio" value="z6.png" id="zone5" name="zonerd" onchange="radiozone(this)"><br>
+                            <label>Zone 7</label>
+                            <input type="radio" value="z7.png" id="zone7" name="zonerd" onchange="radiozone(this)"><br>
+                            <label>Zone 8</label>
+                            <input type="radio" value="z8.png" id="zone8" name="zonerd" onchange="radiozone(this)"><br>
+                        </div>
+
                     </div>
 
                  {{/if}}
-        </div>
        
     </div>
 

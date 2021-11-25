@@ -5,9 +5,32 @@ function levelfunc(){
 
     socket.on('LevelIRR2',message=>{
     console.log('LevelIRR2: ', message);
+    var volume = `${((message)*10*15).toFixed(2)}`
     document.getElementById("tanklevel").value = message
+    document.getElementById("tankvolume").value = volume
+    });
 
-});
+    socket.emit('drinkinglevel');
+    socket.on('DrinkL1',message=>{
+        console.log('DrinkL1: ', message);
+        var volume = `${((message)*4.88*5).toFixed(2)}`
+        document.getElementById("drinkinglevel").value = message
+        document.getElementById("drinkingvolume").value = volume
+    });
+
+    socket.emit('drinkingflow');
+
+    socket.on('FR8',message=>{
+        console.log('FR8: ', message);
+        document.getElementById("flowincoming").value = message
+    });
+
+    socket.emit('outflow');
+
+    socket.on('FR4',message=>{
+        console.log('FR4: ', message);
+        document.getElementById("outflows").value = message
+    });
 }
 
 function frontpage(){
@@ -22,6 +45,43 @@ function frontpage(){
     socket.on('TF116',message=>{
         console.log('TF116: ', message);
         var data = document.getElementById("zon1");
+        data.setAttribute("total-flow", `  Total-Flow:${message} m3`);
+        });
+
+    socket.on('TF64',message=>{
+        console.log('TF64: ', message);
+        var data = document.getElementById("zon2");
+        data.setAttribute("total-flow", `  Total-Flow:${message} m3`);
+        });
+    
+    socket.on('TF120',message=>{
+        console.log('TF120: ', message);
+        var data = document.getElementById("zon3");
+        data.setAttribute("total-flow", `  Total-Flow:${message} m3`);
+        });
+    socket.on('TF113',message=>{
+        console.log('TF113: ', message);
+        var data = document.getElementById("zon4");
+        data.setAttribute("total-flow", `  Total-Flow:${message} m3`);
+        });
+    socket.on('TF114',message=>{
+        console.log('TF114: ', message);
+        var data = document.getElementById("zon5");
+        data.setAttribute("total-flow", `  Total-Flow:${message} m3`);
+        });
+    socket.on('TF115',message=>{
+        console.log('TF115: ', message);
+        var data = document.getElementById("zon6");
+        data.setAttribute("total-flow", `  Total-Flow:${message} m3`);
+        });
+    socket.on('TF118',message=>{
+        console.log('TF118: ', message);
+        var data = document.getElementById("zon7");
+        data.setAttribute("total-flow", `  Total-Flow:${message} m3`);
+        });
+    socket.on('TF112',message=>{
+        console.log('TF112: ', message);
+        var data = document.getElementById("zon8");
         data.setAttribute("total-flow", `  Total-Flow:${message} m3`);
         });
 

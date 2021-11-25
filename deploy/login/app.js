@@ -51,7 +51,7 @@ db.connect((error)=>{
 });
 
 // var client = mqtt.connect(options);
-const client = mqtt.connect('mqtt://test.mosquitto.org')
+const client = mqtt.connect('mqtt://broker.hivemq.com')
 
 client.on('connect',()=>{
     console.log('MQTT Connected');
@@ -62,19 +62,19 @@ client.on('error',()=>{
 
 client.subscribe("TF116");
 
-// client.subscribe("TF64");
+client.subscribe("TF64");
 
-// client.subscribe("TF120");
+client.subscribe("TF120");
 
-// client.subscribe("TF113");
+client.subscribe("TF113");
 
-// client.subscribe("TF114");
+client.subscribe("TF114");
 
-// client.subscribe("TF115");
+client.subscribe("TF115");
 
-// client.subscribe("TF118");
+client.subscribe("TF118");
 
-// client.subscribe("TF112");
+client.subscribe("TF112");
 
 // client.on('message',(topic,message)=>{
 //     var topic = topic;
@@ -430,6 +430,24 @@ io.on('connection',socket =>{
 
     socket.on('level',()=>{
         client.subscribe("LevelIRR2");
+        client.on('message',(topic,message)=>{
+            io.emit(topic,message.toString());
+        })
+    })
+    socket.on('drinkinglevel',()=>{
+        client.subscribe("DrinkL1");
+        client.on('message',(topic,message)=>{
+            io.emit(topic,message.toString());
+        })
+    })
+    socket.on('drinkingflow',()=>{
+        client.subscribe("FR8");
+        client.on('message',(topic,message)=>{
+            io.emit(topic,message.toString());
+        })
+    })
+    socket.on('outflow',()=>{
+        client.subscribe("FR4");
         client.on('message',(topic,message)=>{
             io.emit(topic,message.toString());
         })
